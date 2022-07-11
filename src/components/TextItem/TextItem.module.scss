@@ -1,0 +1,24 @@
+.Container {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin-bottom: 15%;
+  h2 {
+    font-size: 70px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    transition: all 1s ease;
+  }
+  .Third {
+    transition: all 1s ease;
+
+    text-decoration: line-through;
+  }
+  h3 {
+    margin-top: 40px;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 35px;
+  }
+}
