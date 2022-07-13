@@ -1,0 +1,12 @@
+.Container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  .About {
+    padding-left: 3%;
+    font-size: 70px;
+    font-weight: 900;
+    display: grid;
+    align-items: center;
+    height: 100%;
+  }
+}

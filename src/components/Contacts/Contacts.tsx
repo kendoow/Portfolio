@@ -1,75 +1,45 @@
-import * as THREE from 'three';
+import { Suspense, useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-import { useFrame, useLoader } from "@react-three/fiber";
-import { FC, useEffect, useRef, useState } from "react";
-import { config, useSpring, animated } from '@react-spring/three';
-
-export interface ContactsProps {
-    name: string;
-    setRoute: any;
-    image: string;
-}
+import { Canvas } from '@react-three/fiber';
 
 
-const Contacts: FC<ContactsProps> = ({ setRoute,
-    name,
-    image,
-    ...props }) => {
 
-    const ref: any = useRef(null)
-    const [hover, setHover] = useState(false)
+import styles from './Contacts.module.scss';
 
-    useEffect(() => {
-        document.body.style.cursor = hover ? 'pointer' : 'auto'
-    }, [hover])
+import telegramImg from '../../assets/telegram.jpg';
+import githubImg from '../../assets/github.jpg';
+import Box from '../Box/Box';
 
-    const handlerPointerOver = () => {
-        setHover(true)
-    }
-    const handlerPointerOut = () => {
-        setHover(false)
-    }
-    const { scale } = useSpring({
-        scale: hover ? 1.2 : 1,
-        config: config.wobbly
-    })
+const Contacts = () => {
 
-    const handlerClick = () => {
-        switch (name) {
-            case 'telegram':
-                setRoute('telegram')
-                break
-            case 'github':
-                setRoute('github')
-                break
-            default:
-                console.log('Error - Name')
-        }
-    }
 
-    const [texture] = useLoader(THREE.TextureLoader, [image])
-
-    useFrame(({ clock }) => {
-        if (!hover) {
-            ref.current.rotation.x =
-                ref.current.rotation.y =
-                ref.current.rotation.z =
-                Math.cos(clock.getElapsedTime() / 8) * Math.PI
-        }
-    })
 
     return (
-        <mesh
-            ref={ref}
-            scale={scale}
-            onPointerOver={handlerPointerOver}
-            onPointerOut={handlerPointerOut}
-            onClick={handlerClick}
-            {...props}>
-            <boxGeometry args={[0.3, 0.3]} />
-            <meshStandardMaterial map={texture} color='#000' />
-        </mesh>
+        <div className={styles.Container}>
+            <a className={styles.First} href='https://t.me/Kendo_ow' />
+            <Canvas>
+                <Box
+
+                    scale={1}
+                    size={2}
+                    image={telegramImg}
+
+                />
+            </Canvas>
+
+            <a className={styles.Second} href='https://github.com/kendoow' />
+            <Canvas>
+                <Box
+                    scale={1}
+                    size={2}
+                    image={githubImg}
+                />
+            </Canvas>
+
+
+        </div>
     )
 }
 
-export default Contacts
+export default Contacts;

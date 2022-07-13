@@ -1,0 +1,17 @@
+.Container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    transition: all 2s;
+    max-width: 600px;
+    border-radius: 20px;
+    &:hover{
+        transition: all 2s;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.8);
+    }
+    .Title{
+        font-size: 40px;
+        text-align: center;
+        font-weight: 600;
+    }
+}

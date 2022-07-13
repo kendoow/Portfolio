@@ -4,9 +4,9 @@ import styles from './Layout.module.scss'
 
 import logo from '../../assets/logo.svg'
 import Copyrighted from '../Copyrighted/Copyrighted'
-import { channel } from 'diagnostics_channel'
 
-export interface HeaderProps {
+
+interface HeaderProps {
     children: React.ReactNode
 }
 
@@ -25,7 +25,9 @@ const Layout: FC<HeaderProps> = ({ children }) => {
                     portfoilo
                 </Link>
             </div>
+
             {children}
+
             <Copyrighted />
         </>
     )

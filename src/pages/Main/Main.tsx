@@ -1,15 +1,15 @@
 import { Canvas } from '@react-three/fiber'
-import { FC, useState } from 'react'
+import { FC } from 'react'
 
 import Box from '../../components/Box/Box'
 import Layout from '../../components/Layout/Layout'
 import TextItem from '../../components/TextItem/TextItem'
 
 import styles from './Main.module.scss'
-
+import githubImg from '../../assets/github.jpg';
 
 const Main: FC = (): JSX.Element => {
-  const [route, setRoute] = useState('')
+
 
   return (
     <>
@@ -22,7 +22,7 @@ const Main: FC = (): JSX.Element => {
 
             <Canvas>
 
-              <Box color='black' size={2.5} />
+              <Box image={githubImg} color='black' size={2.5} />
             </Canvas>
 
           </div>

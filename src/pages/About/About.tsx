@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import Layout from '../../components/Layout/Layout';
-import AboutItem from '../../UI/AboutText/AboutText';
+import AboutMain from '../../UI/AboutMain/AboutMain';
+import AboutText from '../../UI/AboutText/AboutText';
 import styles from './About.module.scss';
 
 const About:FC = () => {
@@ -8,9 +9,12 @@ const About:FC = () => {
     <div>
         <Layout >
             <div className={styles.Container}>
-                <p>1</p>
+                <div className={styles.MainContainer}>
+                  <AboutMain/>
+                </div>
                 <div className={styles.TextContainer}>
-                    <AboutItem/>
+                    <AboutText/>
+              
                 </div>
             </div>
         </Layout>

@@ -1,16 +1,18 @@
-import {  useFrame } from '@react-three/fiber'
+import * as THREE from 'three';
+
+import {  MeshProps, useFrame, useLoader } from '@react-three/fiber'
 import { FC, Suspense, useRef  } from 'react'
 import { OrbitControls } from '@react-three/drei';
 
 
 
-export interface BoxProps {
+export interface BoxProps extends MeshProps {
   size: number;
   color?: string;
-  texture?: string;
+  image?: any;
 }
 
-const Box: FC<BoxProps> = ({ size, color, texture, ...props }): JSX.Element => {
+const Box: FC<BoxProps> = ({ size, color, image, ...props }): JSX.Element => {
 
 
   const ref: any = useRef()
@@ -18,7 +20,7 @@ const Box: FC<BoxProps> = ({ size, color, texture, ...props }): JSX.Element => {
 
   useFrame((state, delta) => (ref.current.rotation.x += 0.01, ref.current.rotation.y += 0.01))
  
-
+  const [texture] = useLoader(THREE.TextureLoader, [image])
   return (
     <>
       <OrbitControls
@@ -36,7 +38,7 @@ const Box: FC<BoxProps> = ({ size, color, texture, ...props }): JSX.Element => {
         orthographic
       >
         <boxGeometry args={[size, size, size]} />
-        <meshStandardMaterial map={texture} color={color} />
+        <meshStandardMaterial map={image && texture} color={color} />
       </mesh>
 
     </>
