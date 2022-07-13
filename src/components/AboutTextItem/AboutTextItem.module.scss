@@ -1,13 +1,17 @@
-.Container{
-    padding-left: 3%;
-    padding-bottom: 5%;
-    .Title{
-        font-size: 40px;
-        font-weight: 900;
-        margin-bottom: 4%;
-    }
-    .Description{
-        font-size: 30px;
-        line-height: 33px;
-    }
+.Container {
+  padding-bottom: 5%;
+  .Title {
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 4%;
+  }
+  .Description {
+    font-size: 30px;
+    line-height: 33px;
+  }
+}
+@media (max-width: 600px) {
+  .Container {
+    padding-bottom: 15%;
+  }
 }

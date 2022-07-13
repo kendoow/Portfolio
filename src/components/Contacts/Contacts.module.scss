@@ -25,4 +25,20 @@
     height: 40%;
     right: 10%;
   }
+  
+}
+@media (max-width: 800px) {
+  .Container {
+    grid-template-rows: 0.9fr;
+  }
+}
+@media (max-width: 600px) {
+  .Container {
+    grid-template-rows: 0.8fr;
+  }
+}
+@media (max-width: 500px) {
+  .Container {
+    grid-template-rows: 0.7fr;
+  }
 }

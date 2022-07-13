@@ -1,17 +1,70 @@
-.Container{
-    display: grid;
-    justify-content: center;
-    align-items: center;
+.Container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  transition: all 2s;
+  border-radius: 20px;
+  margin-top: 20px;
+  &:hover {
     transition: all 2s;
-    max-width: 600px;
-    border-radius: 20px;
-    &:hover{
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  .Title {
+    font-size: 40px;
+    text-align: center;
+    font-weight: 600;
+  }
+  .MainIcon {
+    width: 500px;
+    height: 400px;
+  }
+  .GitHub {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    a > img {
+      transition: all 2s;
+      border-radius: 10px;
+
+      &:hover {
         transition: all 2s;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.8);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+      }
     }
-    .Title{
-        font-size: 40px;
-        text-align: center;
-        font-weight: 600;
+    .Stack {
+      font-size: 20px;
+      font-weight: 700;
+      max-width: 300px;
     }
+  }
 }
+@media (max-width: 520px) {
+  .Container {
+    .MainIcon {
+      width: 400px;
+      height: 300px;
+      justify-self: center;
+    }
+  }
+  .GitHub {
+    .Stack {
+        max-width: 200px !important;
+      }
+  }
+}
+@media (max-width: 520px) {
+    .Container {
+      .MainIcon {
+        width: 300px;
+        height: 200px;
+      }
+    }
+    .GitHub {
+      .Stack {
+          font-size: 20px;
+          font-weight: 700;
+          max-width: 200px;
+        }
+    }
+  }

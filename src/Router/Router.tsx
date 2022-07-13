@@ -22,7 +22,7 @@ const Router = () => {
   return (
 
     <>
-      <div style={{ overflow: 'hidden', position: 'relative', minHeight: "100vh" }}>
+      <div style={{ overflowX: 'hidden', position: 'relative', minHeight: "100vh" }}>
         {
           transitions((props, item) => (
             <animated.div style={props}>

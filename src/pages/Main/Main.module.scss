@@ -11,3 +11,12 @@
     flex-direction: column;
     align-items: center;
 }
+
+@media (max-width: 800px) {
+  .Container {
+    display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+  }
+}

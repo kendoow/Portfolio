@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import Copyrighted from '../Copyrighted/Copyrighted';
+
 import styles from './TextItem.module.scss';
 
 
@@ -17,6 +17,7 @@ const TextItem: FC = () => {
                 <div>
                     <h3>
                         18 years old enthusiastic boy.
+                        <br/>
                         Currently looking for a job.
                     </h3>
                 </div>

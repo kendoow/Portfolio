@@ -1,12 +1,13 @@
 .Container {
   display: grid;
   grid-template-rows: 1fr 1fr;
-  height: 88vh;
+  min-height: 88vh;
   padding: 0 calc(50% - 850px);
   
 }
 .MainContainer{
   padding: 0 calc(50% - 850px);
-  height: 100%;
+
   display: grid;
 }
+
