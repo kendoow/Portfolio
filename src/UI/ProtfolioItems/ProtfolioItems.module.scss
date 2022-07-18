@@ -1,14 +1,13 @@
-.Container{
-    margin-top: 50px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
+.Container {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
 }
 
-@media (max-width: 1000px) {
-    .Container {
-      display: grid;
-      grid-template-columns: 1fr;
-      
-    }
+@media (max-width: 992px) {
+  .Container {
+    display: grid;
+    grid-template-columns: 1fr;
   }
+}

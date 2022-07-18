@@ -7,11 +7,11 @@ const AboutMain: FC = () => {
     return (
         <>
             <div className={styles.Container}>
-                <h2 className={styles.About}>
+                <h4 className={styles.About}>
                     Front-end Developer
                     <br />
-                    From Moscow.
-                </h2>
+                    from Moscow.
+                </h4>
                 <Contacts />
             </div>
         </>

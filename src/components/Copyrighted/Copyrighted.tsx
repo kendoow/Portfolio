@@ -7,10 +7,7 @@ const Copyrighted: FC = () => {
     return (
         <>
 
-            <p className={styles.P}>
-                © {date.getFullYear()} Vadim Khidirov.
-            </p>
-
+           
         </>
     )
 }

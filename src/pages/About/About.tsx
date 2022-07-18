@@ -7,7 +7,7 @@ import styles from './About.module.scss';
 const About:FC = () => {
   return (
     <div>
-        <Layout >
+        <Layout dark  >
             <div className={styles.Container}>
                 <div className={styles.MainContainer}>
                   <AboutMain/>

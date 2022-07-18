@@ -27,17 +27,17 @@
   }
   
 }
-@media (max-width: 800px) {
+@media (max-width: 992px) {
   .Container {
     grid-template-rows: 0.9fr;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .Container {
     grid-template-rows: 0.8fr;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 576px) {
   .Container {
     grid-template-rows: 0.7fr;
   }

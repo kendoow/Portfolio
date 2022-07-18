@@ -1,6 +1,7 @@
-.Container {
+.Container,
+.DarkContainer {
   padding: 0 calc(50% - 590px);
-  background-color: #fff;
+
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -12,21 +13,20 @@
     transition: all 1s;
   }
 
-  .NavLink {
+  .NavLink,
+  .NavLinkDark {
     position: relative;
     font-size: 30px;
-    color: #000;
+
     font-weight: 900;
     transition: all 1s ease;
     padding: 10px 15px;
     border-radius: 5px;
-    &:hover {
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
-      transition: all 1s;
-    }
   }
+
   .Image {
     transition: all 2s;
+    color: fff;
     &:hover {
       transform: scale(1.5) rotate(210deg);
       transition: all 2s;
@@ -34,7 +34,46 @@
   }
 }
 
-@media (max-width: 500px) {
+
+
+.Container {
+  background-color: #fff;
+  .NavLink {
+    color: #000;
+    &:hover {
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+      transition: all 1s;
+    }
+  }
+}
+.DarkContainer {
+  background-color: #000;
+  .NavLinkDark {
+    color: #fff;
+    &:hover {
+      box-shadow: 0 5px 15px rgba(201, 201, 201, 0.8);
+      transition: all 1s;
+    }
+  }
+}
+
+.DateDark {
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  font-size: 24px;
+  padding-bottom: 20px;
+}
+.Date {
+  text-align: center;
+  background-color: #fff;
+  color: #000;
+  font-size: 24px;
+  padding-bottom: 20px;
+}
+
+
+@media (max-width: 576px) {
   .Container {
     .NavLink {
       padding: 5px 10px;

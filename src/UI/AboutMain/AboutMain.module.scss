@@ -7,16 +7,27 @@
     font-weight: 900;
     display: grid;
     align-items: center;
-    height: 100%;
+   
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 992px) {
   .Container {
+  
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
     .About {
       margin-top: 40px;
+    }
+  }
+}
+
+@media (max-width:576px) {
+  .Container {
+    margin-top: 0;
+    margin-left: 3%;
+    .About {
+      font-size: 40px;
     }
   }
 }

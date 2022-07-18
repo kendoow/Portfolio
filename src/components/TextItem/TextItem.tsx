@@ -16,7 +16,7 @@ const TextItem: FC = () => {
                 </div>
                 <div>
                     <h3>
-                        18 years old enthusiastic boy.
+                        19 years old enthusiastic boy.
                         <br/>
                         Currently looking for a job.
                     </h3>

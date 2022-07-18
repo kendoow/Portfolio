@@ -5,9 +5,15 @@
   margin-right: 3%;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 992px) {
   .Container {
     display: grid;
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width:576px) {
+  .Container {
+   margin-left: 3%;
   }
 }
