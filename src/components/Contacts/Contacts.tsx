@@ -17,7 +17,7 @@ const Contacts = () => {
 
     return (
         <div className={styles.Container}>
-            <a className={styles.First} href='https://t.me/Kendo_ow' />
+            <a target="_blank" className={styles.First} href='https://t.me/Kendo_ow' />
             <Canvas>
                 <Box
 
@@ -28,7 +28,7 @@ const Contacts = () => {
                 />
             </Canvas>
 
-            <a className={styles.Second} href='https://github.com/kendoow' />
+            <a target="_blank" className={styles.Second} href='https://github.com/kendoow' />
             <Canvas>
                 <Box
                     scale={1}
